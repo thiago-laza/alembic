@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "lazah"
+version = "0.1.0"
+description = "primeiro estudo sobre alembic"
+authors = ["thiago-laza <thiago.profmat@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+sqlacodegen = "3.0.0rc1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

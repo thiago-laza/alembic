@@ -1,0 +1,89 @@
+Aqui está uma lista dos principais comandos mencionados ou utilizados no chat, organizados por contexto. Você pode criar um arquivo chamado `comandos.txt` dentro do seu projeto e salvar essa lista.
+
+### **Lista de Comandos**
+
+#### **1. Configuração do Projeto e Ambiente Virtual**
+```bash
+# Ativar o ambiente virtual
+source venv/bin/activate
+
+# Instalar dependências com Poetry
+poetry install
+
+# Adicionar uma nova dependência com versão específica
+poetry add <nome-da-dependencia>@<versão>
+
+# Atualizar dependências no projeto
+poetry update
+```
+
+#### **2. Alembic (Migrations)**
+```bash
+# Inicializar o Alembic no projeto
+alembic init <nome-do-diretorio>
+
+# Criar uma nova migração automaticamente
+alembic revision --autogenerate -m "Mensagem da migração"
+
+# Aplicar todas as migrações pendentes
+alembic upgrade head
+
+# Fazer o downgrade para uma versão anterior
+alembic downgrade <revision-id>
+
+# Gerar o schema atual do banco de dados
+alembic current
+
+# Mostrar ajuda sobre os comandos do Alembic
+alembic --help
+```
+
+#### **3. SQLAlchemy**
+```bash
+# Gerar modelos com sqlacodegen
+sqlacodegen sqlite:///caminho/para/seu_banco.db > models.py
+
+# Verificar a versão do sqlacodegen
+sqlacodegen --version
+```
+
+#### **4. SQLite**
+```bash
+# Abrir o banco de dados SQLite
+sqlite3 live_migrations.db
+
+# Listar todas as tabelas no banco de dados
+.tables
+
+# Mostrar o schema de uma tabela específica
+.schema <nome-da-tabela>
+
+# Exibir o conteúdo de uma tabela
+SELECT * FROM <nome-da-tabela>;
+
+# Sair do SQLite
+.quit
+```
+
+#### **5. Manipulação de Arquivos e Diretórios**
+```bash
+# Exibir a estrutura do diretório
+tree
+
+# Remover um diretório e seu conteúdo
+rm -rf <nome-do-diretorio>
+
+# Mover arquivos ou diretórios
+mv <origem> <destino>
+```
+
+---
+
+### **Salvar em um Arquivo**
+Você pode criar o arquivo com esses comandos diretamente com o seguinte comando no terminal:
+
+```bash
+echo "<comandos aqui>" > comandos.txt
+```
+
+Ou salvar diretamente copiando e colando a lista acima no editor de sua preferência.
